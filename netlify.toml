@@ -1,0 +1,13 @@
+[build]
+  # Базовая директория, в которой лежит package.json для фронта
+  base    = "frontend"
+  # Папка, которую Netlify отдаёт после сборки
+  publish = "frontend/build"
+  # Команда, которая собирает ваше React-приложение
+  command = "yarn build"
+
+# Нужно для корректной работы React-Router на Netlify
+[[redirects]]
+  from = "/*"
+  to   = "/index.html"
+  status = 200
